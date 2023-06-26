@@ -1,0 +1,814 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+body {
+  background: #1a1a1a;
+  font-family: sans-serif;
+}
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__line {
+  position: absolute;
+  top: 89px;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF10;
+}
+
+.header__nav {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+}
+
+.header__nav-item {
+  font-family: sans-serif;
+  font-weight: 700;
+  line-height: 90px;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.header__nav-item:hover {
+  color: #34c759;
+}
+
+.intro {
+  background: url(../img/bg.png) no-repeat top center / cover;
+  width: 100%;
+  height: 100%;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preview__title {
+  font-family: sans-serif;
+  font-size: 72px;
+  line-height: 84px;
+  font-weight: 300;
+  color: #ffff;
+  max-width: 1100px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.preview__title-span {
+  font-weight: 700;
+}
+
+.preview__info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 428px;
+}
+
+.preview__info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preview__info__card-img {
+  width: 26px;
+}
+
+.preview__desc {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 595px;
+}
+
+.preview__btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  color: black;
+  border-radius: 43px;
+  padding: 25px 57px;
+  background: #34c759;
+  outline: none;
+  border: none;
+  transition: 300ms;
+  margin-bottom: 70px;
+  margin-top: 40px;
+}
+
+.preview__btn:hover {
+  background: black;
+  color: #34c759;
+}
+
+.preview__info__card-text {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #ffff;
+  margin-top: 13px;
+}
+
+.preview__info__card-desc {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.main__about {
+  background: #252525;
+  width: 100%;
+  height: 736px;
+  transform: translateY(-20%);
+  padding: 105px 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__about-title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 60px;
+  color: #d9d9d9;
+  position: relative;
+  margin-bottom: 61px;
+}
+
+.main__about-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.main__about-desc {
+  color: #a6a6a6;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  max-width: 734px;
+  text-align: center;
+  margin-bottom: 90px;
+
+}
+
+.main__about-food {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__about-food_arrow {
+  padding: 17px;
+  border-radius: 50%;
+  border: 2px solid #303030;
+}
+
+.right {
+  transform: rotate(-180deg);
+}
+
+.main__about-food_img {
+  display: flex;
+  gap: 34px;
+}
+
+.main__work-title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 0.2em;
+  color: #d9d9d9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.main__work-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.main__work-cards {
+  display: flex;
+  gap: 30px;
+}
+
+.main__work-cards_item {
+  background: #252525;
+  padding: 24px 24px;
+  width: 255px;
+  height: 200px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.main__work-cards_item:hover {
+  background: #34c759;
+}
+
+.main__work-cards_item:hover h3 {
+  color: black;
+}
+
+.main__work-cards_item:hover div {
+  background: #000;
+}
+
+.main__work-cards_item:hover p {
+  color: #000;
+}
+
+.main__work-cards_item-title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.2750000059604645px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.main__work-cards_item-line {
+  background: #34c759;
+  width: 56px;
+  height: 2px;
+}
+
+.main__work-cards_item-desc {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.16249999403953552px;
+  text-align: left;
+  color: #ffffff80;
+  max-width: 207px;
+  margin-top: 24px;
+}
+
+.main__dishes-title {
+  color: white;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 0.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 120px 0 90px 0;
+}
+
+.main__dishes-title img {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main__dishes-cards_item {
+  max-width: 350px;
+  padding: 0 24px 24px 30px;
+  background: #252525;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.main__dishes-cards_item-title {
+  margin-top: 30px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 30px;
+  color: white;
+}
+
+.main__dishes-cards_item-span {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.15000000596046448px;
+  text-align: left;
+  color: #a4a8b2;
+}
+
+.main__dishes-cards_item-bottom {
+  display: flex;
+  gap: 43px;
+  justify-content: space-between;
+}
+
+.main__dishes-cards_item-desc {
+  margin: 20px 0;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.16249999403953552px;
+  text-align: left;
+  color: #a4a8b2;
+  max-width: 290px;
+}
+
+.main__dishes-cards_item-bottom_btn {
+  height: 36px;
+  padding: 32px;
+  border-radius: 43px;
+  background: #34c759;
+  font-family: " Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.main__dishes-cards_item-bottom_btn:hover {
+  background: black;
+  color: #34c759;
+}
+
+.main__dishes-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.main__chefs-title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 0.2em;
+  position: relative;
+  margin-top: 120px;
+}
+
+.main__chefs-title img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.main__chefs-cards-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 33%;
+}
+
+.main__chefs-cards-item_info {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.main__chefs-cards-item_info-text {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: -0.22499999403953552px;
+  color: white;
+  gap: 6px;
+}
+.main__chefs-cards-item_info-text p {
+  color: #ffffff80;
+}
+
+.main__chefs-cards-item-imgs {
+  display: flex;
+  gap: 30px;
+}
+
+.main__chefs-cards {
+  display: flex;
+  gap: 30px;
+}
+
+.main__receipts-title {
+  margin-top: 120px;
+  position: relative;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.main__receipts-title img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.main__receipts-cards-item {
+  width: 50%;
+  height: 510px;
+  background: url(../img/receipts1.png) no-repeat top center / cover;
+  border-radius: 6px;
+}
+
+.main__line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 70px;
+  margin-top: 28px;
+}
+
+.main__line div {
+  width: 60px;
+  height: 2px;
+  background: #34c759;
+}
+
+.main__receipts-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__receipts-cards-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.main__receipts-cards-item_title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: white;
+  padding: 16px;
+  background: #00000080;
+  /* mix-blend-mode: normal; */
+  /* opacity: 0.3; */
+  border-radius: 5px;
+  margin-bottom: 65px;
+}
+
+.main__receipts-cards-item_date {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.main__receipts-cards-item_desc {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+  color: white;
+  max-width: 441px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.main__receipts-cards-item_author {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+  margin-bottom: 60px;
+}
+
+.main__receipts-cards-item_info {
+  display: flex;
+  gap: 30px;
+}
+
+.main__receipts-cards-item_arrow {
+  background: #00000080;
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.main__receipts-cards_right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.main__receipts-cards_right-item {
+  width: 100%;
+  background: #252525;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 30px 28px 20px 30px;
+}
+
+.main__receipts-cards_right-item_text {
+  color: white;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.main__receipts-cards_right-item_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.main__receipts-cards_right-item_bottom-left {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.main__receipts-cards_right-item_bottom-left p {
+  background: #00000080;
+  mix-blend-mode: normal;
+  padding: 6px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 25px;
+  letter-spacing: 1.25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main__receipts-cards_right-item_bottom-left span {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #b3b3b3;
+}
+
+.main__receipts-cards_right-item_bottom-right {
+  display: flex;
+  gap: 30px;
+}
+
+.dinner {
+  background: url(../img/dinner.png) no-repeat top center / cover;
+}
+
+.main__social_cards {
+  display: flex;
+  gap: 30px;
+}
+
+.main__social_title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  position: relative;
+  color: white;
+  margin-top: 120px;
+}
+
+.main__social_title img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.main__social_cards-item {
+  background: #252525;
+  width: 350px;
+  height: 330px;
+  padding: 25px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.main__social_cards-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__social_cards-item-header_logo {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #bfbfbf;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__social_cards-item-header_logo img {
+  border: 2px solid #303030;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.main__social_cards-item-header-btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 40px;
+  letter-spacing: 0.2em;
+  padding: 0 18px;
+  border-radius: 50px;
+  border: 2px solid #303030;
+  color: #737373;
+  text-transform: uppercase;
+  max-height: 40px;
+}
+
+.main__social_cards-item-line {
+  background: #303030;
+  height: 2px;
+  width: 350px;
+  position: absolute;
+  left: 0;
+  top: 88px;
+}
+
+.main__social_cards-item-date {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #737373;
+  margin-top: 45px;
+}
+
+.main__social_cards-item-desc {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 10px 0;
+  color: white;
+}
+
+.main__social_cards-item-author {
+  color: #34c759;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.instagram {
+  padding: 25px 0 0 0;
+  position: relative;
+}
+
+.instagram__header {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.main__social_cards-item-img {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.footer {
+  background: #252525;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 120px;
+  position: relative;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-around;
+  padding: 32px;
+  width: 100%;
+  margin-bottom: 65px;
+}
+
+.footer__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__text {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #737373;
+  margin-bottom: 30px;
+}
+
+.footer__line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #737373;
+  left: 0;
+  top: 155px;
+}
